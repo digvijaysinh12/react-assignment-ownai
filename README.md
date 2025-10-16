@@ -43,27 +43,8 @@ A **React.js** application to manage Purchase Orders (POs) with talent allocatio
 
 ## Project Structure
 
-purchase-order-app/
-│
-├─ public/
-├─ src/
-│ ├─ components/
-│ │ ├─ MainPOFields.jsx # Component for main PO details
-│ │ ├─ ReqSection.jsx # Component for REQ section and talents
-│ │ ├─ TalentInput.jsx # Component for talent input fields
-│ │ └─ PurchaseOrderForm.jsx # Main form component
-│ │
-│ ├─ context/
-│ │ └─ POContext.jsx # Context API for managing state
-│ │
-│ ├─ constants/
-│ │ └─ constants.js # Mock client, PO type, talent & currency data
-│ │
-│ ├─ App.jsx
-│ └─ index.js
-│
-├─ package.json
-└─ README.md
+<img width="605" height="511" alt="image" src="https://github.com/user-attachments/assets/184f8ea0-a8c0-4cf5-b4a4-5405605b3551" />
+
 
 
 ---
