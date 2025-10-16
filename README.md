@@ -58,6 +58,8 @@ git clone https://github.com/digvijaysinh12/react-assignment-ownai.git
 
 cd react-assignment-ownai
 
+cd purchase_order
+
 2. **Install dependencies**
 npm install
 
