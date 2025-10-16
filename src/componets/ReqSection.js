@@ -2,7 +2,7 @@ import React from "react";
 import TalentInput from "./TalentInput";
 
 const ReqSection = ({
-  // one requirement section data
+  // one requirement section 
   section,
   // index of this section  
   idx, 
