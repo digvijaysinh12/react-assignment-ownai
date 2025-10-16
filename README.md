@@ -55,6 +55,7 @@ A **React.js** application to manage Purchase Orders (POs) with talent allocatio
 
 
 git clone https://github.com/digvijaysinh12/react-assignment-ownai.git
+
 cd react-assignment-ownai
 
 2. **Install dependencies**
