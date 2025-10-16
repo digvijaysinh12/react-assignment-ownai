@@ -4,7 +4,7 @@ import MainPOFields from "./MainPOFields";
 import ReqSection from "./ReqSection";
 
 const PurchaseOrderForm = () => {
-  // This data and method comes from POContext for better State management
+  // this data and method comes from POContext for better State management
   // SO that we can write clean code
   const {
     formData,
