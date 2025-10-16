@@ -1,70 +1,163 @@
-# Getting Started with Create React App
+# Purchase Order Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React.js** application to manage Purchase Orders (POs) with talent allocation. Users can create POs, add talent/REQs, track details, and view submitted data in a clean and structured way. Built entirely with **React functional components** and **Context API** for state management.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)  
+- [Demo](#demo)  
+- [Tech Stack](#tech-stack)  
+- [Project Structure](#project-structure)  
+- [Setup & Installation](#setup--installation)  
+- [How It Works](#how-it-works)  
+- [Folder & Component Description](#folder--component-description)  
+- [Future Improvements](#future-improvements)  
+- [Author](#author)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Create Purchase Orders with client details, PO type, dates, and budget.  
+- Add multiple REQs (requirements) for a PO.  
+- Assign talents to each REQ with fields:  
+  - Contract Duration  
+  - Bill Rate  
+  - Standard Time  
+  - Overtime  
+- Currency selection for all numeric fields.  
+- Validation for all inputs (required fields, email, date ranges, budget limit, talent selection).  
+- Read-only view after submission to display submitted PO and talent data.  
+- Reset and add/remove REQs dynamically.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Demo Screenshot](link-to-screenshot-or-gif)  
+*(Replace this with an actual image or GIF of your project)*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- **Frontend:** React.js, Bootstrap 5  
+- **State Management:** React Context API  
+- **Language:** JavaScript (ES6+)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+purchase-order-app/
+│
+├─ public/
+├─ src/
+│ ├─ components/
+│ │ ├─ MainPOFields.jsx # Component for main PO details
+│ │ ├─ ReqSection.jsx # Component for REQ section and talents
+│ │ ├─ TalentInput.jsx # Component for talent input fields
+│ │ └─ PurchaseOrderForm.jsx # Main form component
+│ │
+│ ├─ context/
+│ │ └─ POContext.jsx # Context API for managing state
+│ │
+│ ├─ constants/
+│ │ └─ constants.js # Mock client, PO type, talent & currency data
+│ │
+│ ├─ App.jsx
+│ └─ index.js
+│
+├─ package.json
+└─ README.md
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Setup & Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the repository**
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+git clone https://github.com/digvijaysinh12/react-assignment-ownai.git
+cd react-assignment-ownai
 
-### Analyzing the Bundle Size
+2. **Install dependencies**
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Run the app**
+npm start
 
-### Making a Progressive Web App
+4.Open http://localhost:3000 in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## How It Works
 
-### Advanced Configuration
+### PO Details
+1. Select **Client**, **PO Type**, **PO Number**, **Received On** date, **Received From** info, and **Budget**.
+2. Each field has validation to ensure correct input.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### REQ Details
+1. Add a **REQ** for each job title.
+2. Select **talents** for the REQ.
+3. Fill in talent-specific fields:
+   - **Contract Duration** (in months)
+   - **Bill Rate** (with currency)
+   - **Standard Time** (with currency)
+   - **Overtime** (with currency)
+4. For **Group PO**, you can add multiple REQs.  
+5. Each field has validation with error messages if input is missing or incorrect.
 
-### Deployment
+### Submission
+1. Click **Submit** after filling the form.
+2. The form switches to **read-only mode**, displaying all submitted PO and talent details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Reset & Edit
+1. **Reset** button clears the form and all data.
+2. Dynamically **add/remove REQs** for Group POs before submission.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Folder & Component Description
+
+### `constants/constants.js`
+- Contains mock data for:
+  - Clients
+  - PO Types
+  - Currencies
+  - REQs with talents
+
+### `context/POContext.jsx`
+- Centralized state management using **React Context API**
+- Handles:
+  - Form data
+  - REQ & talent selection
+  - Validation for all fields
+  - Submission and reset logic
+
+### `components/MainPOFields.jsx`
+- Input fields for main PO details:
+  - Client, PO Type, PO Number
+  - Received From (Name & Email)
+  - Dates (Received On, PO Start & End)
+  - Budget with currency selection
+
+### `components/ReqSection.jsx`
+- Handles **one REQ section** per job title
+- Displays talents for selection
+- Supports adding/removing REQs dynamically
+- Shows talent inputs if selected
+
+### `components/TalentInput.jsx`
+- Input fields for each selected talent:
+  - Contract Duration
+  - Bill Rate (with currency)
+  - Standard Time (with currency)
+  - Overtime (with currency)
+- Supports **read-only mode** to display submitted talent details
+
+### `components/PurchaseOrderForm.jsx`
+- Main form component
+- Combines PO fields and multiple REQ sections
+- Handles form submission, validation, reset, and **read-only display**
