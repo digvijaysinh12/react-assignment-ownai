@@ -26,7 +26,7 @@ const TalentInput = ({
 
   return (
     <div className="row g-2 mt-2">
-      {/* Contract Duration */}
+      {/* Contract Duration state */}
       <div className="col-md-3">
         <input
           type="number"
