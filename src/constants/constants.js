@@ -1,5 +1,3 @@
-// src/constants/constants.js
-
 export const CLIENTS = [
   { id: 1, name: "Acme Corporation" },
   { id: 2, name: "TechStart Solutions" },
