@@ -3,7 +3,7 @@ import React from "react";
 const MainPOFields = ({ formData, errors, handleChange, CLIENTS, PO_TYPES, CURRENCIES }) => {
   return (
     <div className="row g-3 mb-4">
-      {/* Client Name */}
+      {/* client name */}
       <div className="col-md-6">
         <label className="form-label">Client Name *</label>
         <select
