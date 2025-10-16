@@ -32,14 +32,6 @@ A **React.js** application to manage Purchase Orders (POs) with talent allocatio
 - Read-only view after submission to display submitted PO and talent data.  
 - Reset and add/remove REQs dynamically.  
 
----
-
-## Demo
-
-![Demo Screenshot](link-to-screenshot-or-gif)  
-*(Replace this with an actual image or GIF of your project)*
-
----
 
 ## Tech Stack
 
